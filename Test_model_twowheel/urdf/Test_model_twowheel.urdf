@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Test_model_twowheel">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.127971061532612 0.320258661752509 0.135534200747675"
+        rpy="0 0 0" />
+      <mass
+        value="2.55059126524419" />
+      <inertia
+        ixx="0.0243545519619488"
+        ixy="8.08722383772206E-08"
+        ixz="-3.7552250774355E-08"
+        iyy="0.0384082245027454"
+        iyz="1.27143891471105E-05"
+        izz="0.0150997793195647" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="body_frame">
+    <inertial>
+      <origin
+        xyz="0.032447090089661 0.0107558375788908 -0.000168914898724198"
+        rpy="0 0 0" />
+      <mass
+        value="2.12827357539073" />
+      <inertia
+        ixx="0.0191666572838141"
+        ixy="-1.27406422046984E-05"
+        ixz="-1.49552195871888E-18"
+        iyy="0.0424663415987444"
+        iyz="-1.96185546420749E-17"
+        izz="0.0235787057088046" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/body_frame.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.3" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/body_frame.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="body_fix"
+    type="fixed">
+    <origin
+      xyz="0.128048360692752 -0.0901283795092336 0.342096386681778"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="body_frame" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Front_wheel">
+    <inertial>
+      <origin
+        xyz="0.022014 0.0019731 0.11577"
+        rpy="0 0 0" />
+      <mass
+        value="0.26479" />
+      <inertia
+        ixx="0.00034075"
+        ixy="5.0752E-08"
+        ixz="-2.7225E-08"
+        iyy="0.00021306"
+        iyz="1.2729E-05"
+        izz="0.00018091" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Front_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Front_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.10691 -0.26713 0.2906"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Left_wheel_Holder">
+    <inertial>
+      <origin
+        xyz="-0.00015234 -0.0005688 -0.0012883"
+        rpy="0 0 0" />
+      <mass
+        value="0.07187" />
+      <inertia
+        ixx="1.5632E-05"
+        ixy="1.6485E-08"
+        ixz="1.5645E-07"
+        iyy="1.6394E-05"
+        iyz="2.9641E-09"
+        izz="1.2077E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Left_wheel_Holder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Left_wheel_Holder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_Holder"
+    type="fixed">
+    <origin
+      xyz="0.3678 0.049872 0.3031"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_wheel_Holder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Right_wheel_Holder">
+    <inertial>
+      <origin
+        xyz="0.00015234 -0.00053677 -0.0012883"
+        rpy="0 0 0" />
+      <mass
+        value="0.07187" />
+      <inertia
+        ixx="1.5632E-05"
+        ixy="1.6485E-08"
+        ixz="-1.5645E-07"
+        iyy="1.6394E-05"
+        iyz="-2.9641E-09"
+        izz="1.2077E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Right_wheel_Holder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Right_wheel_Holder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_Holder"
+    type="fixed">
+    <origin
+      xyz="-0.1122 0.049872 0.3031"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_wheel_Holder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Left_wheel">
+    <inertial>
+      <origin
+        xyz="-0.0023314 -0.00071059 0.0018686"
+        rpy="0 0 0" />
+      <mass
+        value="0.2345" />
+      <inertia
+        ixx="0.00026256"
+        ixy="8.2965E-09"
+        ixz="1.5108E-07"
+        iyy="0.00014774"
+        iyz="1.4969E-06"
+        izz="0.00014421" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Left_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="0.39355 0.063472 0.2903"
+      rpy="1.2178 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Right_wheel">
+    <inertial>
+      <origin
+        xyz="1.2458E-05 0.011305 -0.036419"
+        rpy="0 0 0" />
+      <mass
+        value="0.2345" />
+      <inertia
+        ixx="0.0001483"
+        ixy="-6.741E-09"
+        ixz="2.9897E-08"
+        iyy="0.00014366"
+        iyz="1.4922E-07"
+        izz="0.00026256" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Test_model_twowheel/meshes/Right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Right_wheel_joint"
+    type="revolute">
+    <origin
+      xyz="-0.099202 0.050172 0.2903"
+      rpy="0 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right_wheel" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
